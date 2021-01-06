@@ -36,12 +36,14 @@
         let from=document.getElementById("from").value;
         let to=document.getElementById("to").value;
         let result;
-            if ((from=="vnd")&&(to=="usd"))
-                result=moneyFrom*23000;
-            document.getElementById("result").innerText="ket qua"+result;
-            if ((from=="usd")&&(to=="vnd"))
-                result=moneyFrom/23000;
-            document.getElementById("result").innerText="ket qua"+result;
+        if ((from=="vnd")&&(to=="usd")) {
+                result = moneyFrom * 23000;
+                document.getElementById("result").innerText = "ket qua" + result;
+            }
+        if ((from=="vnd")&&(to=="usd")){
+                result = moneyFrom / 23000;
+                document.getElementById("result").innerText = "ket qua" + result;
+            }
     }
 </script>
 
