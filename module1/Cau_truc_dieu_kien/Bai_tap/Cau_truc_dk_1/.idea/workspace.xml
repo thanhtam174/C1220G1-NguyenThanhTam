@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="492ab482-041b-4164-8c35-9b2502377fc5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../CaseStudy/module1_AccountName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BMI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chia_het.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diem_thi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hoa_hong.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/so_sanh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tim_max.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tinh_cuoc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tuoi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../May_tinh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tinh_so_ngay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/Nam_nhuan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/Toan_tu_3_ngoi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/Toan_tu_3_ngoi2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/ex1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/sign.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/su_kien_ban_phim.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/su_kien_chuot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/swicth-case1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Thuc_hanh/swicth-case2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HTML_Form&amp;Table/Bai_Tap/Tao_lich.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HTML_Form&amp;Table/Bai_Tap/Tao_lich.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1mlc3rub5Ui5TfzqLsTzBuFgGuv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cau_truc_dk2" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="492ab482-041b-4164-8c35-9b2502377fc5" name="Default Changelist" comment="" />
+      <created>1610071421269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610071421269</updated>
+      <workItem from="1610071422472" duration="2761000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="625" y="238" key="FileChooserDialogImpl" timestamp="1610074183453">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="625" y="238" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1610074183453" />
+    <state x="507" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1610071542562">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="507" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1610071542562" />
+  </component>
+</project>

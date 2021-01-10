@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ds=parseInt(prompt("Doanh so:"));
+    let result;
+    if (ds<=10000000){
+        result=ds/100;
+    } else if (ds<=100000000){
+        result=ds/100*3;
+    } else {
+        result=ds/100*5;
+    }
+    alert("So tien hoa hong: "+result);
+</script>
+</body>
+</html>

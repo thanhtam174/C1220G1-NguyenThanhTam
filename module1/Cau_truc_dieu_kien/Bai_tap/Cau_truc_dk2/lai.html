@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money=parseInt(prompt("So tien cho vay:"));
+    let month=parseInt(prompt("So thang cho vay:"));
+    let rate=parseInt(prompt("Lai suat:"));
+    let lai=money*Math.pow((1-rate/100),month);
+    alert("So tien lai: "+lai);
+</script>
+</body>
+</html>

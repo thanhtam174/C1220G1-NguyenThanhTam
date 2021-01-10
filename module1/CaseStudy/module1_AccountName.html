@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bang Gia</title>
+    <style>
+        .table {
+            font-family: Tahoma;
+            margin: auto;
+            width: 700px;
+            background: aqua;
+        }
+
+        .table tr, .table td, .table th {
+            padding: 6px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <table class="table">
+        <th colspan="2" style="text-align: center"> Bang Gia</th>
+        <tr>
+            <td style="width: 150px">Ho va Ten</td>
+            <td><input type="text" name="name" style="width: 300px" height="100px"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">So CMND</td>
+            <td><input type="text" name="cmnd" style="width: 300px" height="100px"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Ngay sinh</td>
+            <td><input type="text" name="birthday" style="width: 300px" height="100px"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Email</td>
+            <td><input type="email" name="email" style="width: 300px" height="100px"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Dia chi</td>
+            <td><textarea name="adress" id="adr" cols="50" rows="3"></textarea></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Loai Customer</td>
+            <td>
+                <select name="customer" id="typecutom">
+                    <option value="diamond">Diamond</option>
+                    <option value="platium">Platium</option>
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="member">Member</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Giam gia</td>
+            <td><input type="number" name="giam" id="sale"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">So luong di kem</td>
+            <td><input type="number" name="solg"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">So ngay thue</td>
+            <td><input type="number" name="songay" id="rday"></td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Loai dich vu</td>
+            <td>
+                <select id="typeser">
+                    <option value="villa">Villa</option>
+                    <option value="house">House</option>
+                    <option value="room">Room</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 150px">Loai phong thue</td>
+            <td>
+                <select name="loaiphongthue" id="lphong">
+                    <option value="vip">VIP</option>
+                    <option value="business">Business</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="pay()" value="Submit"></td>
+        </tr>
+        <td id="result"></td>
+    </table>
+</form>
+<script>
+    let hpay;
+
+    function pay() {
+        let rentDays = document.getElementById("rday").value;
+        let sale = document.getElementById("sale").value;
+        let typeservice = document.getElementById("typeser").value;
+        switch (typeservice) {
+            case "villa":
+                hpay = 500 * rentDays * (1 - sale / parseFloat(100));
+                break;
+            case "house":
+                hpay = 300 * rentDays * (1 - sale / parseFloat(100));
+                break;
+            case  "room":
+                hpay = 100 * rentDays * (1 - sale / parseFloat(100));
+                break;
+        }
+        document.getElementById("result").innerText = "Gia tien phai tra: $" + hpay;
+    }
+</script>
+</body>
+</html>

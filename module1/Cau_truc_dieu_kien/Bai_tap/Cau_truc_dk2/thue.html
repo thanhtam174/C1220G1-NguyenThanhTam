@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income=parseInt(prompt("Thu nhap"));
+    let tax;
+    if (income<1000000){
+        tax=0;
+    }else if (income<10000000){
+        tax=income/100;
+    }else if (income<100000000){
+        tax=income/100*3;
+    }else {
+        tax=income/100*5;
+    }
+    alert("Thue: "+tax);
+</script>
+</body>
+</html>
