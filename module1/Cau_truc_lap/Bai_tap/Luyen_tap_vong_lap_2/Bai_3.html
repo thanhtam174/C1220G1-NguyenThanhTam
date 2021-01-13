@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhap cac truong hop(1-4)'));
+    switch (n) {
+        case 1:
+            for (let i = 1; i <= 5; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write('*');
+                }
+                document.write('<br>');
+            }
+            break;
+        case 2:
+            for (let i = 5; i >= 1; i--) {
+                for (let j = 1; j <= i; j++) {
+                    document.write('*');
+                }
+                document.write('<br>');
+            }
+            break;
+
+        case 3:
+            for (let i = 1; i <= 5; i++) {
+                for (let k = 1; k <= 5 - i; k++) {
+                    document.write('&nbsp&nbsp');
+                }
+                for (let k = 1; k <= i; k++) {
+                    document.write('*')
+                }
+                document.write('<br>');
+            }
+            break;
+        case 4:
+            for (let i = 5; i >= 1; i--) {
+                for (let k = 1; k <= 5 - i; k++) {
+                    document.write('&nbsp&nbsp');
+                }
+                for (let k = 1; k <= i; k++) {
+                    document.write('*');
+                }
+                document.write('<br>');
+            }
+            break;
+        default:
+            alert('Truong hop ban nhap khong co trong danh sach');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let t = parseFloat(prompt("Nhap nhiet do"));
+    do {
+        if (t < 20) {
+            alert('Tang nhiet do');
+        }
+        if (t > 100) {
+            alert('Giam nhiet do');
+        }
+        t = parseFloat(prompt('Nhap nhiet do'));
+    } while (t < 20 || t > 100)
+    console.log(t);
+</script>
+</body>
+</html>

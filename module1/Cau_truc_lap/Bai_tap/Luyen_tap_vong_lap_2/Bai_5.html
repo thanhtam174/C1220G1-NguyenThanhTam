@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt('So tien ban dau'));
+    let month = parseInt(prompt('So thang cho vay'));
+    let lai = parseInt(prompt('Lai hang thang(%)'));
+    let total = 0;
+    for (let i = 1; i <= month; i++) {
+        total = total + money * lai / 100;
+        money = money + money * lai / 100;
+    }
+    alert('So tien lai: ' + total);
+</script>
+</body>
+</html>

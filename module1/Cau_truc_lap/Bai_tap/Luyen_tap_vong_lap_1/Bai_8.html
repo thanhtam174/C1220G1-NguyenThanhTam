@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input style="background: yellow" type="button" id="nut" onclick="doan()" value="Play">
+<script>
+    function doan() {
+        alert('Nhap khoang ban muon doan');
+        let min = parseInt(prompt('nhap min:'));
+        let max = parseInt(prompt('nhap max'));
+        let chon;
+        do {
+            chon = parseInt(prompt('nhap so ban doan'));
+        } while ((chon < min) && (chon > max));
+        let i = parseInt(Math.random() * (max - min) + min);
+        if (chon == i) {
+            alert('Ban chon dung');
+        } else {
+            alert('Ban chon sai');
+            alert('So ngau nhien la: ' + i);
+        }
+    }
+</script>
+</body>
+</html>

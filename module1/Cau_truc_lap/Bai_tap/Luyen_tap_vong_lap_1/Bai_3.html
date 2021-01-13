@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let j = 1;
+    let k = 1;
+    console.log(j);
+    console.log(k);
+    for (let i = 1; i <= 18; i++) {
+        console.log(j + k);
+        let tem;
+        tem = k;
+        k = j + k;
+        j = tem;
+    }
+</script>
+</body>
+</html>

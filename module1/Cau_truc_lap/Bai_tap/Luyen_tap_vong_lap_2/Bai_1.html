@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let j = 1;
+    let k = 1;
+    let n = parseInt(prompt('Nhap so luong phan tu trong day fibo'))
+    document.write(j + '; ');
+    document.write(k + '; ');
+    for (let i = 1; i <= (n - 2); i++) {
+        document.write(j + k + '; ');
+        let tem;
+        tem = k;
+        k = j + k;
+        j = tem;
+    }
+</script>
+</body>
+</html>

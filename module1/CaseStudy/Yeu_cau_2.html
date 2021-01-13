@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name = "Tuan";
+    let cmnd = "123123";
+    let birthday = "12/5/1982";
+    let email = "313@avsd";
+    let address = "Da Nang";
+    let typeCustomer = "gold";
+    let discount = 0;
+    let typeRoom = "Vip";
+    let typeService = "room";
+    let rentDays = "6";
+    let totalPay = 0;
+    let quantityIncluded = 5;
+    let chooose;
+    do {
+        choose = parseInt(prompt("1.Hien thi thong tin khach hang" + "\n" +
+            "2.Thay doi thong tin khach hang" + "\n" +
+            "3.Tong so tien phai tra"));
+        switch (choose) {
+            case 1:
+                alert("1.Ho va Ten: " + name + "\n" +
+                    "2.CMND: " + cmnd + "\n" +
+                    "3.Ngay sinh: " + birthday + "\n" +
+                    "4.email: " + email + "\n" +
+                    "5.Dia chi: " + address + "\n" +
+                    "6.Loai Khach hang: " + typeCustomer + "\n" +
+                    "7.Loai phong: " + typeRoom + "\n" +
+                    "8.Loai dich vu: " + typeService + "\n" +
+                    "9.So luong di kem: " + quantityIncluded + "\n" +
+                    "10.So ngay thue: " + rentDays + "\n" +
+                    "11. Giam gia: " + discount);
+                break;
+            case 2:
+                let tem;
+                do {
+                    let choose1 = parseInt(prompt("1.Ho va Ten: " + name + "\n" +
+                        "2.CMND: " + cmnd + "\n" +
+                        "3.Ngay sinh: " + birthday + "\n" +
+                        "4.email: " + email + "\n" +
+                        "5.Dia chi: " + address + "\n" +
+                        "6.Loai Khach hang: " + typeCustomer + "\n" +
+                        "7.Loai phong: " + typeRoom + "\n" +
+                        "8.Loai dich vu: " + typeService + "\n" +
+                        "9.So luong di kem: " + quantityIncluded + "\n" +
+                        "10.So ngay thue: " + rentDays + "\n" +
+                        "11. Giam gia: " + discount));
+                    switch (choose1) {
+                        case 1:
+                            name = prompt("Nhap Ten");
+                            break;
+                        case 2:
+                            cmnd = prompt("Nhap so cmnd");
+                            break;
+                        case 3:
+                            birthday = prompt("Nhap ngay sinh");
+                            break;
+                        case 4:
+                            email = prompt("Nhap Email");
+                            break;
+                        case 5:
+                            address = prompt("Nhap Dia chi");
+                            break;
+                        case 6:
+                            typeCustomer = prompt("Loai khach hang");
+                            break;
+                        case 7:
+                            typeRoom = prompt("Loai phong");
+                            break;
+                        case 8:
+                            typeService = prompt("Loai dich vu");
+                            break;
+                        case 9:
+                            quantityIncluded = prompt("So luong di kem");
+                            break;
+                        case 10:
+                            rentDays = prompt("So ngay thue");
+                            break;
+                        default:
+                            alert("Failed");
+                    }
+                    tem = prompt("Ban muon thay doi tiep thong tin(y/n)");
+                } while (tem == "y");
+                break;
+            case 3:
+                if (address === "Da Nang") {
+                    discount += 20;
+                } else if (address === "Hue") {
+                    discount += 10;
+                } else if (address === "Quang Nam") {
+                    discount += 5;
+                }
+                if (rentDays > 7) {
+                    discount += 30;
+                } else if (rentDays >= 5) {
+                    discount += 20;
+                } else if (rentDays >= 2) {
+                    discount += 10;
+                }
+                if (typeCustomer == "diamond") {
+                    discount += 15;
+                } else if (typeCustomer == "platium") {
+                    discount += 10;
+                } else if (typeCustomer == "gold") {
+                    discount += 5;
+                } else if (typeCustomer == "silver") {
+                    discount += 2;
+                }
+                switch (typeService) {
+                    case "villa":
+                        totalPay = 500 * rentDays - discount;
+                        break;
+                    case "house":
+                        totalPay = 300 * rentDays - discount;
+                        break;
+                    case  "room":
+                        totalPay = 100 * rentDays - discount;
+                        break;
+                }
+                alert("So tien phai tra: $" + totalPay);
+                break;
+            default:
+                alert("Lua chon cua ban khong nam trong trinh don");
+
+        }
+    } while (true);
+</script>
+</body>
+</html>
