@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let int = [];
+    let check;
+    let n;
+    let max, total, tb;
+    do {
+        check = true;
+        n = prompt("Nhap so luong phan tu cua mang")
+        if (n == "") {
+            continue;
+        }
+        if (isNaN(n)) {
+            continue;
+        }
+        check = !Number.isInteger(n * 1);
+    } while (check);
+    n = parseInt(n);
+    for (let i = 0; i < n; i++) {
+        do {
+            check = true;
+            if (i == 0) {
+                int[i] = prompt("Nhap vao so nguyen thu dau tien");
+            } else {
+                int[i] = prompt("Nhap vao so nguyen thu " + i);
+            }
+            if (int[i] == "") {
+                continue;
+            }
+            if (isNaN(int[i])) {
+                continue;
+            }
+            check = !Number.isInteger(int[i] * 1);
+            if (parseInt(n) <= 0) {
+                check = true;
+            }
+        } while (check);
+    }
+    max = parseInt(int[0]);
+    total = 0;
+    for (let i = 0; i < n; i++) {
+        if (max < int[i]) {
+            max = parseInt(int[i]);
+        }
+        total += parseInt(int[i]);
+    }
+    tb = parseInt(total / int.length);
+    alert("Gia tri lon nhat trong mang la: " + max + "\n" +
+        "Gia tri trung binh cua phan tu trong mang la: " + tb);
+</script>
+</body>
+</html>

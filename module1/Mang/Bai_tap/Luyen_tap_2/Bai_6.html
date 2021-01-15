@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = [];
+    let n;
+    let check;
+    do {
+        check = true;
+        n = prompt("Nhap so luong phan tu cua mang")
+        if (n == "") {
+            continue;
+        }
+        if (isNaN(n)) {
+            continue;
+        }
+        check = !Number.isInteger(n * 1);
+        if (parseInt(n) <= 0) {
+            check = true;
+        }
+    } while (check);
+    n = parseInt(n);
+    for (let i = 0; i < n; i++) {
+        do {
+            check = false;
+            if (i == 0) {
+                str[i] = prompt("Nhap vao ky tu thu dau tien");
+            } else {
+                str[i] = prompt("Nhap vao ky tu thu " + i);
+            }
+            if (str[i] == "") {
+                continue;
+            }
+        } while (check);
+    }
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == "-") {
+            str[i] = "_";
+        }
+    }
+    alert(str.join(""));
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let c = [];
+    let check;
+    for (let i = 0; i < 10; i++) {
+        do {
+            check = true;
+            if (i == 0) {
+                a[i] = prompt("Nhap vao so nguyen thu dau tien");
+            } else {
+                a[i] = prompt("Nhap vao so nguyen thu " + i);
+            }
+            if (a[i] == "") {
+                continue;
+            }
+            if (isNaN(a[i])) {
+                continue;
+            }
+            check = !Number.isInteger(a[i] * 1);
+        } while (check);
+        a[i] = parseInt(a[i]);
+    }
+    for (let i = 0; i < 10; i++) {
+        do {
+            check = true;
+            if (i == 0) {
+                b[i] = prompt("Nhap vao so nguyen thu dau tien");
+            } else {
+                b[i] = prompt("Nhap vao so nguyen thu " + i);
+            }
+            if (b[i] == "") {
+                continue;
+            }
+            if (isNaN(b[i])) {
+                continue;
+            }
+            check = !Number.isInteger(b[i] * 1);
+        } while (check);
+        b[i] = parseInt(b[i]);
+    }
+    c = a.concat(b);
+    alert(c);
+</script>
+</body>
+</html>

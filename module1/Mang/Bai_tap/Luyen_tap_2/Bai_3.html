@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n;
+    let check;
+    do {
+        check = true;
+        n = prompt("Nhap so luong phan tu cua mang")
+        if (n == "") {
+            continue;
+        }
+        if (isNaN(n)) {
+            continue;
+        }
+        check = !Number.isInteger(n * 1);
+        if (parseInt(n) <= 0) {
+            check = true;
+        }
+    } while (check);
+    n = parseInt(n);
+    for (let i = 0; i < n; i++) {
+        do {
+            check = false;
+            if (i == 0) {
+                a[i] = prompt("Nhap vao ky tu thu dau tien");
+            } else {
+                a[i] = prompt("Nhap vao ky tu thu " + i);
+            }
+            if (a[i] == "") {
+                continue;
+            }
+        } while (check);
+    }
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        if (!isNaN(a[i])) {
+            count++;
+        }
+    }
+    alert("Trong mang co " + count + " ky tu so");
+</script>
+</body>
+</html>

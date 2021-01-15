@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let int = [];
+    let n;
+    let check;
+    do {
+        check = true;
+        n = prompt("Nhap so luong phan tu cua mang")
+        if (n == "") {
+            continue;
+        }
+        if (isNaN(n)) {
+            continue;
+        }
+        check = !Number.isInteger(n * 1);
+    } while (check);
+    n = parseInt(n);
+    for (let i = 0; i < n; i++) {
+        do {
+            check = true;
+            if (i == 0) {
+                int[i] = prompt("Nhap vao so nguyen thu dau tien");
+            } else {
+                int[i] = prompt("Nhap vao so nguyen thu " + i);
+            }
+            if (int[i] == "") {
+                continue;
+            }
+            if (isNaN(int[i])) {
+                continue;
+            }
+            check = !Number.isInteger(int[i] * 1);
+        } while (check);
+    }
+    let v = prompt("Nhap V = ");
+    do {
+        if (v == "") {
+            continue;
+        }
+        if (isNaN(v)) {
+            continue;
+        }
+        check = !Number.isInteger(v * 1);
+        if (parseInt(n) <= 0) {
+            check = true;
+        }
+    } while (check);
+    check = true;
+    for (let i = 0; i < n; i++) {
+        if (parseInt(v) == parseInt(int[i])) {
+            alert(v + " is in the array");
+            break;
+            check = false;
+        }
+    }
+    if (check) {
+        alert(v + " is not in the array");
+    }
+</script>
+</body>
+</html>

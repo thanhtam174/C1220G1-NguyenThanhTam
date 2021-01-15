@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let totalPay = 0;
+    let discount = 0;
+    let check;
+    let name;
+    do{
+        check=true;
+        name=prompt("Nhap ten");
+        name.split("");
+        for (let i=0;i<name.length;i++){
+            if (!isNaN(name[i])){
+                
+            }
+        }
+    }while (check)
+    let cmnd;
+    do {
+        cmnd = prompt("So CMND");
+        check = true;
+        if ((cmnd == "") || (isNaN(cmnd)) || (parseInt(cmnd) < 0)) {
+            continue;
+        }
+        check = !Number.isInteger(cmnd * 1);
+    } while (check);
+    let birthday;
+    do {
+        check = true;
+        birthday = prompt("Nhap ngay sinh (DD/MM/YYYY)");
+        birthday.split("");
+        if (birthday.length != 10 || birthday[2] != "/" || birthday[5] != "/") {
+            continue;
+        }
+        let day = birthday[0] + birthday[1];
+        if ((day == "") || (isNaN(day)) || (parseInt(day) <= 0) || (parseInt(day) > 31)) {
+            continue;
+        }
+        let check1 = !Number.isInteger(day * 1);
+        let month = birthday[3] + birthday[4];
+        if ((month == "") || (isNaN(month)) || (parseInt(month) <= 0) || (parseInt(month) > 12)) {
+            continue;
+        }
+        let check2 = !Number.isInteger(month * 1);
+        let year = birthday[6] + birthday[7];
+        if ((year == "") || (isNaN(year)) || (parseInt(year) <= 0)) {
+            continue;
+        }
+        let check3 = !Number.isInteger(year * 1);
+        check = check1 && check2 && check3;
+    } while (check);
+
+    let email;
+    do {
+        check = true;
+        email = prompt("Nhap Email(abc@abc.abc)");
+        email.split("");
+        let index;
+        let count = 0;
+        let checkEmail1 = true;
+        let checkEmail2 = true;
+        let checkEmail3 = true;
+        for (let i = 0; i < email.length; i++) {
+            if ((email[i] == "@") && (i != 0)) {
+                index = i;
+                checkEmail1 = false;
+                break;
+            }
+        }
+        for (let i = index; i < email.length; i++) {
+            if ((email[i] == ".") && (i != (email.length - 1))) {
+                checkEmail2 = false;
+                count++;
+            }
+        }
+        if (count == 1) {
+            checkEmail3 = false
+        }
+        check = checkEmail1 || checkEmail2 || checkEmail3;
+    } while (check);
+    let address = prompt("Nhap dia chi");
+    let typeCustomer = prompt("Nhap loai khach hang");
+    let typeRoom = prompt("Nhap loai phong");
+    let typeService = prompt("Nhap loai dich vu");
+    let rentDays;
+    do {
+        rentDays = prompt("So ngay  thue");
+        check = true;
+        if ((rentDays == "") || (isNaN(rentDays)) || (parseInt(rentDays) <= 0)) {
+            continue;
+        }
+        check = !Number.isInteger(rentDays * 1);
+    } while (check);
+    let quantityIncluded;
+    do {
+        quantityIncluded = prompt("So luong di kem");
+        check = true;
+        if ((quantityIncluded == "") || (isNaN(quantityIncluded)) || (parseInt(quantityIncluded) <= 0)) {
+            continue;
+        }
+        check = !Number.isInteger(quantityIncluded * 1);
+    } while (check);
+
+</script>
+</body>
+</html>

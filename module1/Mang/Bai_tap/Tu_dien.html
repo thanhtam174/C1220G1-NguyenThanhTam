@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let eng = [];
+    let vie = [];
+    let check;
+    let n = prompt("Nhap so luong tu");
+    let i = 0;
+    do {
+        check = true;
+        eng[i] = prompt("Tu Tieng Anh");
+        vie[i] = prompt("Nghia Tieng Viet");
+        if (eng[i] == "" || vie[i] == "") {
+            check = true;
+        } else {
+            i++;
+        }
+        if (i == n) {
+            break;
+        }
+    } while (check);
+    let search = prompt("tu can tim nghia");
+    check = true;
+    for (let i = 0; i < eng.length; i++) {
+        if (search == eng[i]) {
+            alert(eng[i] + " : " + vie[i]);
+            check = false;
+            break;
+        }
+    }
+    if (check) {
+        alert(search + " khong co trong tu dien");
+    }
+</script>
+</body>
+</html>
