@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9828c686-5a4f-4b8d-81b2-ffb7617dafd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../CaseStudy/Yeu_cau_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Feet&amp;Meters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/IsPrime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/KT_doi_xung.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Quan_li_SP.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Thuc_hanh/Tao_&amp;_goi_ham.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Thuc_hanh/Tim_min.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham/Thuc_hanh/Tinh_nhiet_do.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/Hinh_chu_nhat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thuc_hanh/Canvas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thuc_hanh/Date.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thuc_hanh/Hinh_tron.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy/Yeu_cau_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/Yeu_cau_3.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1nEd2Lkr1T5BUp7F3QDVv0PvUpk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9828c686-5a4f-4b8d-81b2-ffb7617dafd4" name="Default Changelist" comment="" />
+      <created>1610958975960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610958975960</updated>
+      <workItem from="1610958977115" duration="4801000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

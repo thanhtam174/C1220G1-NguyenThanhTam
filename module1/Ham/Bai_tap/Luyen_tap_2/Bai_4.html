@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check;
+    let char;
+    do {
+        char = prompt("Nhap 1 ky tu bat ki");
+        check = char.length != 1;
+        if (check) {
+            alert("Chi nhap 1 ky tu");
+        }
+    } while (check);
+    checkNumber(char);
+
+    function checkNumber(char) {
+        check = !isNaN(char);
+        alert(check);
+    }
+</script>
+</body>
+</html>

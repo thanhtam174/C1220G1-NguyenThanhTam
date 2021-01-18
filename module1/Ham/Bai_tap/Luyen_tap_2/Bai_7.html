@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let int = [];
+    let check;
+    do {
+        int[0] = prompt("Nhap so nguyen thu 1");
+        check = !checkInt(int[0]);
+    } while (check);
+    do {
+        int[1] = prompt("Nhap so nguyen thu 2");
+        check = !checkInt(int[1]);
+    } while (check);
+    alert("Truoc khi hoan doi a = " + int[0] + " b = " + int[1]);
+    hoanDoi(int);
+    alert("Sau khi hoan doi a = " + int[0] + " b = " + int[1]);
+
+    function checkInt(num) {
+        if (num == "") {
+            return false
+        }
+        if (isNaN(num)) {
+            return false;
+        }
+        return Number.isInteger(num * 1);
+    }
+
+    function hoanDoi(arr) {
+        let temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+</script>
+</body>
+</html>

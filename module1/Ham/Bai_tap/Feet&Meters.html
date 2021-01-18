@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let feet = [1.0, 2.0, 9.0, 10.0];
+    let meter = [20.0, 25.0, 60.0, 65.0];
+    let result;
+    for (let i = 0; i < feet.length; i++) {
+        result = feetToMeter(feet[i]);
+        document.write(result + "<br>")
+    }
+    for (let i = 0; i < meter.length; i++) {
+        result = meterToFeet(meter[i]);
+        document.write(result + "<br>")
+    }
+
+    function feetToMeter(feet) {
+        let meter = 0.305 * feet;
+        return meter;
+    }
+
+    function meterToFeet(meter) {
+        let feet = 3.279 * meter;
+        return feet;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let int = [];
+    let check;
+    let n;
+    do {
+        n = prompt("Nhap so luong so nguyen trong mang");
+        check = !checkInt(n) || (n <= 0);
+    } while (check);
+    inputInt(int);
+    alert("Mang truoc khi dao nguoc " + int.join(" ; "));
+    int.reverse();
+    alert("Mang sau khi dao nguoc " + int.join(" ; "));
+
+    function inputInt(int) {
+        for (let i = 0; i < n; i++) {
+            do {
+                int[i] = prompt("Nhap so nguyen thu " + (i + 1));
+                check = !checkInt(int[i]);
+            } while (check);
+        }
+    }
+
+    function checkInt(num) {
+        if (num == "") {
+            return false
+        }
+        if (isNaN(num)) {
+            return false;
+        }
+        return Number.isInteger(num * 1);
+    }
+</script>
+</body>
+</html>

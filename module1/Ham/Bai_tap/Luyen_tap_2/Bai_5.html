@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check;
+    let int1;
+    let int2;
+    let int3;
+    do {
+        int1 = prompt("Nhap so nguyen thu 1");
+        check = !checkInt(int1);
+    } while (check);
+    do {
+        int2 = prompt("Nhap so nguyen thu 2");
+        check = !checkInt(int2);
+    } while (check);
+    do {
+        int3 = prompt("Nhap so nguyen thu 3");
+        check = !checkInt(int3);
+    } while (check);
+    let result = min(int1, int2, int3);
+    alert("Gia tri nho nhat la " + result);
+
+    function checkInt(num) {
+        if (num == "") {
+            return false
+        }
+        if (isNaN(num)) {
+            return false;
+        }
+        return Number.isInteger(num * 1);
+    }
+
+    function min(num1, num2, num3) {
+        if ((num1 < num2) && (num1 < num3)) {
+            return num1;
+        } else if (num2 < num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+</script>
+</body>
+</html>

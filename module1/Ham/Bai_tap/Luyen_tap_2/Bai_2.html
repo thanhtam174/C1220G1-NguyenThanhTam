@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let r = prompt("Nhap vao ban kinh");
+    let s = caculatorS_Oracle(r);
+    let c = caculatorC_Oracle(r);
+    alert("Dien tich hinh tron la: " + s + "\n" +
+        "Chu vi hinh tron la: " + c);
+
+    function caculatorS_Oracle(bk) {
+        return 3.14 * bk * bk;
+    }
+
+    function caculatorC_Oracle(bk) {
+        return 2 * 3.14 * bk;
+    }
+</script>
+</body>
+</html>

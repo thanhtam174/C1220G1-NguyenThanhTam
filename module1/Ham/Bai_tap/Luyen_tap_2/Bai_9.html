@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let char = [];
+    let n;
+    let check;
+    do {
+        n = prompt("Nhap so luong ky tu trong mang");
+        check = !checkInt(n) || (n <= 0);
+    } while (check);
+    inputChar(char);
+    let a;
+    do {
+        a = prompt("Nhap ky tu can tim");
+        check = (a.length != 1);
+        if (check) {
+            alert("Chi nhap 1 ky tu");
+        }
+    } while (check);
+    let count = 0;
+    seach(a);
+    if (count > 0) {
+        alert("So lan xuat hien cua " + a + " trong mang " + count);
+    } else {
+        alert(a + " khong xuat hien trong mang");
+    }
+
+    function seach(a) {
+        for (let i = 0; i < n; i++) {
+            if (a == char[i]) {
+                count++;
+            }
+        }
+    }
+
+    function inputChar(arr) {
+        for (let i = 0; i < n; i++) {
+            do {
+                arr[i] = prompt("Nhap ky tu thu " + (i + 1));
+                check = (arr[i].length != 1);
+                if (check) {
+                    alert("Chi nhap 1 ky tu")
+                }
+
+            } while (check);
+        }
+    }
+
+    function checkInt(num) {
+        if (num == "") {
+            return false
+        }
+        if (isNaN(num)) {
+            return false;
+        }
+        return Number.isInteger(num * 1);
+    }
+</script>
+</body>
+</html>

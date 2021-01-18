@@ -9,17 +9,21 @@
     let totalPay = 0;
     let discount = 0;
     let check;
-    let name;
-    do{
-        check=true;
-        name=prompt("Nhap ten");
-        name.split("");
-        for (let i=0;i<name.length;i++){
-            if (!isNaN(name[i])){
-                
-            }
+    let name = prompt("Nhap ten");
+    let name2 = "";
+    name = name.trim();
+    name = name.toLowerCase();
+    for (let i = 0; i < name.length; i++) {
+        if ((name.charAt(i) === " ") && (name.charAt(i + 1) === " ")) {
+            continue;
         }
-    }while (check)
+        if ((i === 0) && (name.charAt(i - 1) === " ")) {
+            name2 += name.charAt(i).toUpperCase();
+        } else {
+            name2 += name.charAt(i);
+        }
+    }
+    alert(name);
     let cmnd;
     do {
         cmnd = prompt("So CMND");

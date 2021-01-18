@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="addCustomer()" value="Them">
+<input type="button" onclick="deleteCustomer()" value="Xoa">
+<input type="button" onclick="display()" value="Hien Thi">
+<script>
+    let arrNameCustomer = ["Dinh Van Thang", "Bui Thanh Tai", "Ho Quang Kha"];
+
+    function addCustomer() {
+        let n = prompt("So nguoi can them vao");
+        let tem;
+        for (let i = 1; i <= n; i++) {
+            arrNameCustomer.push(tem = prompt("Nhap vao ten nguoi thu " + i));
+        }
+    }
+
+    function deleteCustomer() {
+        let name = prompt("Nhap ten nguoi can xoa");
+        for (let i = 0; i < arrNameCustomer.length; i++) {
+            if (name === arrNameCustomer[i]) {
+                arrNameCustomer.splice(i, 1);
+            }
+        }
+    }
+
+    function display() {
+        arrNameCustomer.sort();
+        alert(arrNameCustomer);
+    }
+</script>
+</body>
+</html>
