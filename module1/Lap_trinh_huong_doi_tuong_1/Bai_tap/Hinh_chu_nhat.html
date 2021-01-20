@@ -10,52 +10,60 @@
 <p>Sau khi thay doi</p>
 <canvas id="myCanvas2" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
 <script>
-function draw(l,w,id){
-    let c = document.getElementById(id);
-    let ctx = c.getContext("2d");
-    ctx.fillStyle = "#FF0000";
-    ctx.fillRect(0,0,25*l,25*w);
-}
-    let Rectangle = function (length, weight) {
+    function draw(l, w, id) {
+        let c = document.getElementById(id);
+        let ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 25 * l, 25 * w);
+    }
 
-        this.length = length;
+    class Rectangle {
+        constructor(length, weight) {
+            this.length = length;
 
-        this.weight = weight;
-        this.getLength = function () {
+            this.weight = weight;
+        }
+
+        getLength() {
             return this.length;
         };
-        this.getWeight = function () {
+
+        getWeight() {
             return this.weight;
         };
-        this.setLength = function (length) {
+
+        setLength(length) {
             this.length = length;
         };
-        this.setWeight = function (weight) {
+
+        setWeight(weight) {
             this.weight = weight;
         };
-        this.getArea = function () {
-            return this.length*this.weight;
-        };
-        this.getPerimeter = function () {
-            return (this.length+this.weight) * 2;
+
+        getArea() {
+            return this.length * this.weight;
         };
 
-    };
+        getPerimeter() {
+            return (this.length + this.weight) * 2;
+        };
+
+    }
     let rectangle = new Rectangle(8, 2);
     let l = rectangle.getLength();
     let w = rectangle.getWeight();
-    let s=rectangle.getArea();
-    let p=rectangle.getPerimeter();
-    alert("Chieu dai: " + l + " Chieu rong: " + w+" Dien Tich: "+s+" Chu vi: "+p);
-    draw(l,w,"myCanvas");
+    let s = rectangle.getArea();
+    let p = rectangle.getPerimeter();
+    alert("Chieu dai: " + l + " Chieu rong: " + w + " Dien Tich: " + s + " Chu vi: " + p);
+    draw(l, w, "myCanvas");
     rectangle.setLength(12);
     rectangle.setWeight(5);
-    l=rectangle.getLength();
-    w=rectangle.getWeight();
-    s=rectangle.getArea();
-    p=rectangle.getPerimeter();
-    alert("Chieu dai: " + l + " Chieu rong: " + w+" Dien Tich: "+s+" Chu vi: "+p);
-    draw(l,w,"myCanvas2");
+    l = rectangle.getLength();
+    w = rectangle.getWeight();
+    s = rectangle.getArea();
+    p = rectangle.getPerimeter();
+    alert("Chieu dai: " + l + " Chieu rong: " + w + " Dien Tich: " + s + " Chu vi: " + p);
+    draw(l, w, "myCanvas2");
 </script>
 </body>
 </html>

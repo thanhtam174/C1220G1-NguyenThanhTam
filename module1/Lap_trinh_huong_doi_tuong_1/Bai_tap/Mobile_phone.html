@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(pin, status, inbox, sentbox, writingbox, missed) {
+            this.pin = pin;
+            this.status = status;
+            this.inbox = inbox;
+            this.sentbox = sentbox;
+            this.writingbox = writingbox;
+            this.mised = missed;
+        }
+
+        getPin() {
+            alert("Pin còn " + this.pin);
+        }
+
+        checkOnOff() {
+            if (this.status == true) {
+                return "On";
+            } else {
+                return "Off";
+            }
+        }
+
+        onOff() {
+            return this.status = !this.status;
+        }
+
+        refillBattery(add) {
+            while (this.pin <= 100) {
+                this.pin += 0.01;
+            }
+        }
+
+        writeMessages() {
+            if (this.status) {
+                let message = prompt(" Viet tin nhan");
+                this.pin--;
+                return message;
+            } else {
+                return false;
+            }
+        }
+
+        sentMessege(mobile) {
+            let message = this.writeMessages();
+            if (message !== false) {
+                let check, chosse;
+                do {
+                    chosse = prompt("Ban co muon gui khong(y/n)");
+                    check = !((chosse == "y") || (chosse == "n"));
+                    if (check) {
+                        alert("Vui long chon y/n");
+                    }
+                } while (check);
+                if (chosse == "y") {
+                    this.sentbox.push(message);
+                    mobile.receiveMessages(message)
+                } else {
+                    this.writingbox.push(message);
+                }
+                this.pin--;
+            } else {
+                alert("Mobile chua bat");
+            }
+        }
+
+        receiveMessages(message) {
+            if (this.status) {
+                this.inbox.push(message);
+                this.pin--;
+            } else {
+                this.mised.push(message);
+            }
+        }
+
+        inBox() {
+            if (this.status) {
+                alert("Ban co " + this.inbox.length + " trong hop thu den");
+                let choose = parseInt(prompt("Ban muon xem tin nhan thu"));
+                alert(this.inbox[choose - 1]);
+                this.pin--;
+            } else {
+                alert("Mobile chua bat");
+            }
+        }
+
+        sentBox() {
+            if (this.status) {
+                alert("Ban co " + this.sentbox.length + " trong hop thu da gui");
+                let choose = parseInt(prompt("Ban muon xem tin nhan thu"));
+                alert(this.sentbox[choose - 1]);
+                this.pin--;
+            } else {
+                alert("Mobile chua bat");
+            }
+        }
+
+        missedBox() {
+            if (this.status) {
+                if (this.mised.length != 0) {
+                    alert("Ban co " + this.mised.length + " trong hop thu bo lo");
+                    let choose = parseInt(prompt("Ban muon xem tin nhan thu"));
+                    alert(this.mised[choose - 1]);
+                    this.inbox.push(this.mised[choose - 1]);
+                    this.mised.splice(choose - 1, 1);
+                    this.pin--;
+                } else {
+                    alert("Ban khong co tin nhan bo lo");
+                }
+            } else {
+                alert("Mobile chua bat");
+            }
+        }
+    }
+
+    let nokia = new Mobile(80, true, [], [], [], []);
+    let iphone = new Mobile(20, false, [], [], [], []);
+    nokia.checkOnOff();
+    nokia.sentMessege(iphone);
+    nokia.sentBox();
+    nokia.getPin();
+    iphone.checkOnOff();
+    iphone.onOff();
+    iphone.inBox();
+    iphone.missedBox();
+    iphone.missedBox();
+    iphone.inBox();
+    iphone.getPin();
+    iphone.refillBattery();
+</script>
+</body>
+</html>

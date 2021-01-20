@@ -6,7 +6,29 @@
 </head>
 <body>
 <script>
-    let
+    class Temprature {
+        constructor(c) {
+            this.c = c;
+        }
+
+        getC() {
+            return this.c;
+        };
+
+        getToF() {
+            return 9 / 5 * this.c + 32;
+        };
+
+        getToK() {
+            return this.c + 273.15;
+        };
+    }
+
+    let temp = new Temprature(25);
+    let c = temp.getC();
+    let f = temp.getToF();
+    let k = temp.getToK();
+    alert("Nhiet do: " + c + " do C " + f + " do F " + k + " do K");
 </script>
 </body>
 </html>

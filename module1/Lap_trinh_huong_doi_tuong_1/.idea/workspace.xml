@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9828c686-5a4f-4b8d-81b2-ffb7617dafd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CaseStudy/Yeu_cau_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Feet&amp;Meters.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/IsPrime.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/KT_doi_xung.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_1/Bai_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Luyen_tap_2/Bai_9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Bai_tap/Quan_li_SP.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Thuc_hanh/Tao_&amp;_goi_ham.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Thuc_hanh/Tim_min.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ham/Thuc_hanh/Tinh_nhiet_do.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/Hinh_chu_nhat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai_tap/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Thuc_hanh/Canvas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Thuc_hanh/Date.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Thuc_hanh/Hinh_tron.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaseStudy/Yeu_cau_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/Yeu_cau_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai_tap/Mobile_phone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bien_va_kieu_du_lieu/Bai_tap/tinh_nhiet_do.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Bien_va_kieu_du_lieu/Bai_tap/tinh_nhiet_do.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai_tap/Hinh_chu_nhat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_tap/Hinh_chu_nhat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai_tap/Temprature.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai_tap/Temprature.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bien_va_kieu_du_lieu/Bai_tap/tinh_nhiet_do.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,11 +52,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610958975960</updated>
-      <workItem from="1610958977115" duration="4801000" />
+      <workItem from="1610958977115" duration="5314000" />
+      <workItem from="1611018849581" duration="9958000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="625" y="238" key="FileChooserDialogImpl" timestamp="1611019256962">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="625" y="238" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1611019256962" />
   </component>
 </project>
