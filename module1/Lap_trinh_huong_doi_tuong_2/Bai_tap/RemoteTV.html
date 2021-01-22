@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(code) {
+            this.code = code;
+        }
+
+        turnOnOff(status) {
+            this.code = status;
+        }
+
+        changeChanel(chanel) {
+            this.code = chanel;
+        }
+
+        changeVolume(change) {
+            this.code = change;
+        }
+    }
+
+    class TV {
+        constructor(status, volume, chanel) {
+            this.status = status;
+            this.volume = volume;
+            this.chanel = chanel;
+        }
+
+        turnOnOff(remote) {
+            if (remote.code == "on") {
+                this.status = true;
+            }
+            if (remote.code == "off") {
+                this.status = false;
+            }
+        }
+
+        changeChanel(remote) {
+            this.chanel = remote.code;
+        }
+
+        changeVolume(remote) {
+            this.volume = this.volume + remote.code;
+        }
+    }
+
+    let tv1 = new TV(false, 30, 2);
+    let remote1 = new Remote(3);
+    remote1.turnOnOff("on");
+    tv1.turnOnOff(remote1);
+    console.log(tv1.status);
+    remote1.changeChanel(7);
+    tv1.changeChanel(remote1);
+    console.log("Chanel: " + tv1.chanel);
+    remote1.changeChanel(3);
+    tv1.changeChanel(remote1);
+    console.log("Chanel: " + tv1.chanel);
+    console.log("Volume: " + tv1.volume);
+    remote1.changeVolume(2);
+    tv1.changeVolume(remote1);
+    console.log("Volume: " + tv1.volume);
+    tv1.changeVolume(remote1);
+    remote1.turnOnOff("off");
+    tv1.turnOnOff(remote1);
+    console.log(tv1.status);
+</script>
+</body>
+</html>

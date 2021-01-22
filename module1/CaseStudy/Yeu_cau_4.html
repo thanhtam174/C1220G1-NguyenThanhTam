@@ -5,33 +5,51 @@
     <title>Title</title>
 </head>
 <body>
-<input type="button" onclick="addCustomer()" value="Them">
-<input type="button" onclick="deleteCustomer()" value="Xoa">
-<input type="button" onclick="display()" value="Hien Thi">
 <script>
     let arrNameCustomer = ["Dinh Van Thang", "Bui Thanh Tai", "Ho Quang Kha"];
-
-    function addCustomer() {
-        let n = prompt("So nguoi can them vao");
-        let tem;
-        for (let i = 1; i <= n; i++) {
-            arrNameCustomer.push(tem = prompt("Nhap vao ten nguoi thu " + i));
+    do {
+        let choose = prompt("1. Add Name Customer" + "\n" +
+            "2. Delete Customer" + "\n" +
+            "3. Shows Customer"
+        );
+        switch (parseInt(choose)) {
+            case 1:
+                addCustomer();
+                break;
+            case 2:
+                deleteCustomer();
+                break;
+            case 3:
+                show();
+                break;
+            default:
+                alert("Lua chon khong co trong trinh don");
         }
-    }
 
-    function deleteCustomer() {
-        let name = prompt("Nhap ten nguoi can xoa");
-        for (let i = 0; i < arrNameCustomer.length; i++) {
-            if (name === arrNameCustomer[i]) {
-                arrNameCustomer.splice(i, 1);
+        function addCustomer() {
+            let n = prompt("So nguoi can them vao");
+            let tem;
+            for (let i = 1; i <= n; i++) {
+                arrNameCustomer.push(tem = prompt("Nhap vao ten nguoi thu " + i));
             }
         }
-    }
 
-    function display() {
-        arrNameCustomer.sort();
-        alert(arrNameCustomer);
-    }
+        function deleteCustomer() {
+            let name = prompt("Nhap ten nguoi can xoa");
+            for (let i = 0; i < arrNameCustomer.length; i++) {
+                if (name === arrNameCustomer[i]) {
+                    arrNameCustomer.splice(i, 1);
+                }
+            }
+            show();
+        }
+
+        function show() {
+            arrNameCustomer.sort();
+            alert(arrNameCustomer);
+        }
+    } while (true);
+
 </script>
 </body>
 </html>

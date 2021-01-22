@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class SwicthButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(lamp) {
+            if (this.status) {
+                lamp.turnOn();
+            } else {
+                lamp.turnOff();
+            }
+        }
+
+        swicthOn() {
+            this.status = true;
+        }
+
+        swicthOff() {
+            this.status = false;
+        }
+    }
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+    }
+
+    let lamp1 = new ElectricLamp(false);
+    let button1 = new SwicthButton(false, lamp1);
+    button1.swicthOn();
+    button1.connectToLamp(lamp1);
+    alert(lamp1.status);
+    button1.swicthOff();
+    button1.connectToLamp(lamp1);
+    alert(lamp1.status);
+</script>
+</body>
+</html>
