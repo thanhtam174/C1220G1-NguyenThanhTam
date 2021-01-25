@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check;
+    let arrListCustomer = ["Bui Thanh Tai", "Nguyen Thanh Cong", "Phan Thanh Hau", "Hoang Ngoc Kien", "Le Thi Lien"];
+    do {
+        check = true;
+        displayMainMenu(arrListCustomer);
+    } while (check);
+
+    function displayMainMenu(arr) {
+        let choose = prompt("1. Add Name Customer" + "\n" +
+            "2. Delete Customer" + "\n" +
+            "3. Display Information Customer" + "\n" +
+            "4. Edit Information Customer" + "\n" +
+            "5. Exit"
+        );
+        switch (parseInt(choose)) {
+            case 1:
+                addNewCustomer(arr);
+                break;
+            case 2:
+                deleteCustomer(arr);
+                break;
+            case 3:
+                displayCustomer(arr);
+                break;
+            case 4:
+                editCustomer(arr);
+                break;
+            case 5:
+                check = false;
+                break;
+            default:
+                alert("Lua chon khong co trong trinh don");
+        }
+    }
+
+    function addNewCustomer(arr) {
+        let n = prompt("So nguoi can them vao");
+        let tem;
+        for (let i = 1; i <= n; i++) {
+            arr.push(tem = prompt("Nhap vao ten nguoi thu " + i));
+        }
+    }
+
+    function deleteCustomer(arr) {
+        let check1 = true;
+        let name = prompt("Nhap ten nguoi can xoa");
+        for (let i = 0; i < arr.length; i++) {
+            if (name === arr[i]) {
+                arr.splice(i, 1);
+                check1 = false;
+            }
+        }
+        if (check1) {
+            alert("Ten ban chon khong co trong danh sach");
+        }
+        displayCustomer(arr);
+    }
+
+    function displayCustomer(arr) {
+        arr.sort();
+        alert(arr);
+    }
+
+    function editCustomer(arr) {
+        let newName;
+        let check1 = true;
+        let choose = prompt("Ten nguoi can thay doi");
+        for (let i = 0; i < arr.length; i++) {
+            if (choose == arr[i]) {
+                newName = prompt("Ten moi");
+                arr[i] = newName;
+                check1 = false;
+                break;
+            }
+        }
+        if (check1) {
+            alert("Ten ban chon khong co trong danh sach");
+        }
+    }
+</script>
+</body>
+</html>

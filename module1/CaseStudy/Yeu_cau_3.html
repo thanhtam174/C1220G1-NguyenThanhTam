@@ -14,21 +14,21 @@
     name = name.trim();
     name = name.toLowerCase();
     for (let i = 0; i < name.length; i++) {
-        if ((name.charAt(i) === " ") && (name.charAt(i + 1) === " ")) {
+        if ((name.charAt(i) == " ") && (name.charAt(i + 1) == " ")) {
             continue;
-        }
-        if ((i === 0) && (name.charAt(i - 1) === " ")) {
+        } else if ((i == 0) || (name.charAt(i - 1) == " ")) {
             name2 += name.charAt(i).toUpperCase();
         } else {
             name2 += name.charAt(i);
         }
     }
+    name = name2;
     alert(name);
     let cmnd;
     do {
         cmnd = prompt("So CMND");
         check = true;
-        if ((cmnd == "") || (isNaN(cmnd)) || (parseInt(cmnd) < 0)) {
+        if ((cmnd == "") || (isNaN(cmnd)) || (parseInt(cmnd) < 0) || (cmnd.length != 9)) {
             continue;
         }
         check = !Number.isInteger(cmnd * 1);
