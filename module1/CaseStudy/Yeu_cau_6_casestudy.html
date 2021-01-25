@@ -3,6 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <h2 style="color: blue">Danh sach khach hang</h2>
@@ -543,7 +564,8 @@
             "        <th>So ngay thue</th>\n" +
             "        <th>So luong di kem</th>\n" +
             "        <th>Giam gia</th>\n" +
-            "        <th>Tong tien phai tra</th>\n" +
+            "        <th>Tong tien phai tra ($)</th>\n" +
+            "        <th colspan='2'>Chuc nang</th>\n" +
             "    </tr>";
         for (let i = 0; i < arr.length; i++) {
             bang += " <tr>\n" +
@@ -577,7 +599,8 @@
             "        <th>So dien thoai</th>\n" +
             "        <th>Trinh do</th>\n" +
             "        <th>Vi tri lam viec</th>\n" +
-            "        <th>Luong</th>\n" +
+            "        <th>Tien luong ($)</th>\n" +
+            "        <th colspan='2'>Chuc nang</th>\n" +
             "    </tr>";
         for (let i = 0; i < arr.length; i++) {
             bang += " <tr>\n" +
