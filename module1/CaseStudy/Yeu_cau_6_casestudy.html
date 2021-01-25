@@ -5,10 +5,9 @@
     <title>Title</title>
 </head>
 <body>
+<button onclick="addNewCustomer(listCustomer)">Them Khach Hang Moi</button>
 <p id="scr"></p>
 <script>
-    let check;
-
     class Customer {
         constructor(name, cmnd, birthday, email, address, typeCustomer, typeRoom, typeService, rentDays, quantityIncluded, discount) {
             this.name = name;
@@ -116,32 +115,132 @@
             let totalPay;
             switch (this.typeService) {
                 case "villa":
-                    totalPay = 500 * rentDays * (1 - this.discount / parseFloat(100));
+                    totalPay = 500 * parseInt(this.rentDays) * (1 - this.discount / parseFloat(100));
                     break;
                 case "house":
-                    totalPay = 300 * rentDays * (1 - this.discount / parseFloat(100));
+                    totalPay = 300 * parseInt(this.rentDays) * (1 - this.discount / parseFloat(100));
                     break;
                 case  "room":
-                    totalPay = 100 * rentDays * (1 - this.discount / parseFloat(100));
+                    totalPay = 100 * parseInt(this.rentDays) * (1 - this.discount / parseFloat(100));
                     break;
             }
             return totalPay;
         }
-        getInfo(){
-            document.write("Ho va ten: "+this.name+
-                "\nCMND: "+this.cmnd+
-                "\nNgay sinh: "+this.birthday+
-                "\nEmail: "+this.email+
-                "\nDia chi: "+this.address+
-                "\nLoai khach hang: "+this.typeCustomer+
-                "\nLoai phong: "+this.typeRoom+
-                "\nLoai dich vu: "+this.typeService+
-                "\nSo ngay thue: "+this.rentDays+
-                "\nSo luong di kem: "+this.quantityIncluded+
-                "\nGiam gia: "+this.discount+"\n");
+        getInfo() {
+            return "1. Ho va Ten: " + this.name + "\n2. CMND: " + this.cmnd +
+                "\n3. Ngay sinh: " + this.birthday + "\n 4. Email: " + this.email+
+                "\n5. Dia chi: "+this.address+"\n6. Loai khach hang: "+this.getTypeCustomer()+
+                "\n7. Loai phong: "+this.typeRoom+"\n8. Loai dich vu: "+this.typeService+
+                "\n9. So ngay thue: "+this.rentDays+"\n10. So luong di kem: "+this.quantityIncluded+
+                "\n11. Giam gia: "+this.discount;
         }
+
     }
 
+    function editCustomer(i) {
+            let choose= prompt(listCustomer[i].getInfo()+
+                '\n12. Thoát');
+            switch (parseInt(choose)) {
+                case 1:
+                    let name = prompt("Nhap ten");
+                    let name2 = "";
+                    name = name.trim();
+                    name = name.toLowerCase();
+                    for (let i = 0; i < name.length; i++) {
+                        if ((name.charAt(i) == " ") && (name.charAt(i + 1) == " ")) {
+                            continue;
+                        } else if ((i == 0) || (name.charAt(i - 1) == " ")) {
+                            name2 += name.charAt(i).toUpperCase();
+                        } else {
+                            name2 += name.charAt(i);
+                        }
+                    }
+                    name = name2;
+                    listCustomer[i].setName(name);
+                    editCustomer(i);
+                    break;
+                case 2:
+                    let cmnd;
+                    do {
+                        cmnd = prompt("So CMND");
+                        check = true;
+                        if ((cmnd == "") || (isNaN(cmnd)) || (parseInt(cmnd) < 0) || (cmnd.length != 9)) {
+                            continue;
+                        }
+                        check = !Number.isInteger(cmnd * 1);
+                    } while (check);
+                    listCustomer[i].setCMND(cmnd);
+                    editCustomer(i);
+                    break;
+                case 3:
+                    let birthday;
+                    do {
+                        birthday = prompt("Nhap ngay sinh");
+                    } while (!checkBirthday(birthday));
+                    listCustomer[i].setBirthday(birthday);
+                    editCustomer(i);
+                    break;
+                case 4:
+                    let email;
+                    do {
+                        email = prompt("Nhap Email")
+                    } while (!checkEmail(email));
+                    listCustomer[i].setEmail(email);
+                    editCustomer(i);
+                    break;
+                case 5:
+                    let address = prompt("Nhap dia chi");
+                    listCustomer[i].setAddress(address);
+                    editCustomer(i);
+                    break;
+                case 6:
+                    let typeCustomer = prompt("Nhap loai khach hang");
+                    listCustomer[i].setTypeCustomer(typeCustomer);
+                    editCustomer(i);
+                    break;
+                case 7:
+                    let typeRoom = prompt("Nhap loai phong");
+                    listCustomer[i].setTypeRoom(typeRoom);
+                    editCustomer(i);
+                    break;
+                case 8:
+                    let typeService = prompt("Nhap loai dich vu");
+                    listCustomer[i].setTypeService(typeService);
+                    editCustomer(i);
+                    break;
+                case 9:
+                    let rentDays = prompt("Nhap so ngay thue");
+                    listCustomer[i].setRentDays(rentDays);
+                    editCustomer(i);
+                    break;
+                case 10:
+                    let quantityIncluded = prompt("Nhap so luong di kem");
+                    listCustomer[i].setQuantityIncluded(quantityIncluded);
+                    editCustomer(i);
+                    break;
+                case 11:
+                    let discount = prompt("Nhap giam gia");
+                    listCustomer[i].setDiscount(discount);
+                    editCustomer(i);
+                    break;
+                    case 12:
+                        break;
+                default:
+                    alert("Lua chon cua ban khong nam trong trinh don");
+                    editCustomer(i);
+            }
+        displayCustomer(listCustomer);
+        }
+
+    function deleteCustomer(id) {
+        let xacNhanXoa = confirm("bạn có muốn xóa khach hang: "+ listCustomer[id].getName());
+        if (xacNhanXoa){
+            listCustomer.splice(id,1);
+        }else {
+            alert("bạn không muốn xóa");
+        }
+        displayCustomer(listCustomer);
+    }
     function addNewCustomer(arr) {
         let name = prompt("Nhap ten");
         let name2 = "";
@@ -197,102 +296,8 @@
         return reg.test(birthday);
     }
 
-    function deleteCustomer(i) {
-       listCustomer.splice(i,1);
-        displayCustomer(listCustomer);
-    }
-    function editCustomer(i) {
-        let choose = prompt("Chon thong tin can sua" + "\n" +
-                "1.Ho va Ten: " + name + "\n" +
-                "2.CMND: " + cmnd + "\n" +
-                "3.Ngay sinh: " + birthday + "\n" +
-                "4.Email: " + email + "\n" +
-                "5.Dia chi: " + address + "\n" +
-                "6.Loai Khach hang: " + typeCustomer + "\n" +
-                "7.Loai phong: " + typeRoom + "\n" +
-                "8.Loai dich vu: " + typeService + "\n" +
-                "9.So luong di kem: " + quantityIncluded + "\n" +
-                "10.So ngay thue: " + rentDays + "\n" +
-                "11. Giam gia: " + discount);
-            switch (parseInt(choose)) {
-                case 1:
-                    let name = prompt("Nhap ten");
-                    let name2 = "";
-                    name = name.trim();
-                    name = name.toLowerCase();
-                    for (let i = 0; i < name.length; i++) {
-                        if ((name.charAt(i) == " ") && (name.charAt(i + 1) == " ")) {
-                            continue;
-                        } else if ((i == 0) || (name.charAt(i - 1) == " ")) {
-                            name2 += name.charAt(i).toUpperCase();
-                        } else {
-                            name2 += name.charAt(i);
-                        }
-                    }
-                    name = name2;
-                    listCustomer[i].setName(name);
-                    break;
-                case 2:
-                    let cmnd;
-                    do {
-                        cmnd = prompt("So CMND");
-                        check = true;
-                        if ((cmnd == "") || (isNaN(cmnd)) || (parseInt(cmnd) < 0) || (cmnd.length != 9)) {
-                            continue;
-                        }
-                        check = !Number.isInteger(cmnd * 1);
-                    } while (check);
-                    listCustomer[i].setCMND(cmnd);
-                    break;
-                case 3:
-                    let birthday;
-                    do {
-                        birthday = prompt("Nhap ngay sinh");
-                    } while (!checkBirthday(birthday));
-                    listCustomer[i].setBirthday(birthday);
-                    break;
-                case 4:
-                    let email;
-                    do {
-                        email = prompt("Nhap Email")
-                    } while (!checkEmail(email));
-                    listCustomer[i].setEmail(email);
-                    break;
-                case 5:
-                    let address = prompt("Nhap dia chi");
-                    listCustomer[i].setAddress(address);
-                    break;
-                case 6:
-                    let typeCustomer = prompt("Nhap loai khach hang");
-                    listCustomer[i].setTypeCustomer(typeCustomer);
-                    break;
-                case 7:
-                    let typeRoom = prompt("Nhap loai phong");
-                    listCustomer[i].setTypeRoom(typeRoom);
-                    break;
-                case 8:
-                    let typeService = prompt("Nhap loai dich vu");
-                    listCustomer[i].setTypeService(typeService);
-                    break;
-                case 9:
-                    let rentDays = prompt("Nhap so ngay thue");
-                    listCustomer[i].setRentDays(rentDays);
-                    break;
-                case 10:
-                    let quantityIncluded = prompt("Nhap so luong di kem");
-                    listCustomer[i].setQuantityIncluded(quantityIncluded);
-                    break;
-                case 11:
-                    let discount = prompt("Nhap giam gia");
-                    listCustomer[i].setDiscount(discount);
-                    break;
-                default:
-                    alert("Lua chon cua ban khong nam trong trinh don");
-        }
-        displayCustomer(listCustomer);
-    }
-    function displayCustomer(arr){
-        let bang="<table border='1'>\n" +
+    function displayCustomer(arr) {
+        let bang = "<table border='1'>\n" +
             "    <tr>\n" +
             "        <th>Ho va ten</th>\n" +
             "        <th>CMND</th>\n" +
@@ -305,29 +310,31 @@
             "        <th>So ngay thue</th>\n" +
             "        <th>So luong di kem</th>\n" +
             "        <th>Giam gia</th>\n" +
+            "        <th>Tong tien phai tra</th>\n" +
             "    </tr>";
-        for (let i=0;i<arr.length;i++){
-            bang+=" <tr>\n" +
-                "        <td>"+arr[i].getName()+"</td>\n" +
-                "        <td>"+arr[i].getCMND()+"</td>\n" +
-                "        <td>"+arr[i].getBirthday()+"</td>\n" +
-                "        <td>"+arr[i].getEmail()+"</td>\n" +
-                "        <td>"+arr[i].getAddress()+"</td>\n" +
-                "        <td>"+arr[i].getTypeCustomer()+"</td>\n" +
-                "        <td>"+arr[i].getTypeRoom()+"</td>\n" +
-                "        <td>"+arr[i].getTypeService()+"</td>\n" +
-                "        <td>"+arr[i].getRentDays()+"</td>\n" +
-                "        <td>"+arr[i].getQuantityIncluded()+"</td>\n" +
-                "        <td>"+arr[i].getDiscount()+"</td>\n" +
-                "        <td><button onclick=\"editCustomer("+i+")\">Sua</button></td>\n" +
-                "        <td><button onclick=\"deleteCustomer("+i+")\">Xoa</button></td>\n" +
+        for (let i = 0; i < arr.length; i++) {
+            bang += " <tr>\n" +
+                "        <td>" + arr[i].getName() + "</td>\n" +
+                "        <td>" + arr[i].getCMND() + "</td>\n" +
+                "        <td>" + arr[i].getBirthday() + "</td>\n" +
+                "        <td>" + arr[i].getEmail() + "</td>\n" +
+                "        <td>" + arr[i].getAddress() + "</td>\n" +
+                "        <td>" + arr[i].getTypeCustomer() + "</td>\n" +
+                "        <td>" + arr[i].getTypeRoom() + "</td>\n" +
+                "        <td>" + arr[i].getTypeService() + "</td>\n" +
+                "        <td>" + arr[i].getRentDays() + "</td>\n" +
+                "        <td>" + arr[i].getQuantityIncluded() + "</td>\n" +
+                "        <td>" + arr[i].getDiscount() + "</td>\n" +
+                "        <td>" + arr[i].totalPay() + "</td>\n" +
+                "        <td><button onclick=\"editCustomer(" + i + ")\">Sua</button></td>\n" +
+                "        <td><button onclick=\"deleteCustomer(" + i + ")\">Xoa</button></td>\n" +
                 "    </tr>";
         }
-        bang+="</table>";
+        bang += "</table>";
         document.getElementById("scr").innerHTML = bang;
     }
     let listCustomer=[];
-    let customer1=new Customer("nguyen van a","012345678","12/12/2000","dsds@sdas.com","Da nang","gold","vip","villa",6,5,20);
+    let customer1=new Customer("Nguyen Van A",112345678,"12/12/2000","dsds@sdas.com","Da nang","gold","vip","villa",6,5,20);
     listCustomer.push(customer1);
     displayCustomer(listCustomer);
 </script>
